@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #1a1a1a;
+        color: #f1f1f1;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-display: swap; /* Use the 'swap' value for page speed*/
+      }
+      .navbar-container {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .company-logo {
+        width: 20%;
+        text-align: start;
+      }
+      .nav-list {
+        display: flex;
+        width: 80%;
+        list-style-type: none;
+        justify-content: end;
+        gap: 65px;
+      }
+      .list-item a {
+        text-decoration: none;
+        color: #f1f1f1;
+      }
+      #sub-menu {
+        list-style-type: none;
+        position: relative;
+      }
+      .btn {
+        padding: 12px 24px;
+        background-color: rgb(23, 127, 230);
+        border-radius: 10px;
+      }
+      .toggle-button {
+        display: none;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 5px;
+        background-color: #373737;
+        width: 10%;
+        gap: 10px;
+        cursor: pointer;
+      }
+      .bar-lines {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #f1f1f1;
+      }
+      #sub-menus {
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background-color: #373737;
+        list-style-type: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar-container">
+        <div class="company-logo">
+          <span>Logo</span>
+        </div>
+        <ul class="nav-list">
+          <li class="list-item">
+            <a href="#home">Home</a>
+          </li>
+          <li class="list-item">
+            <a href="#" id="sub-menu">About </a>
+            <ul id="sub-menus">
+              <li class="sub-menu">
+                <a href="#oueStory">Our Story</a>
+              </li>
+              <li class="sub-menu">
+                <a href="#ourTeam">Our Team</a>
+              </li>
+              <li class="sub-menu">
+                <a href="#careers">Careers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list-item">
+            <a href="#Services"> Services </a>
+          </li>
+          <li class="list-item">
+            <a href="#blog">Blog</a>
+          </li>
+          <li class="list-item">
+            <a href="#contact" class="btn">Contact Us</a>
+          </li>
+        </ul>
+        <div class="toggle-button">
+          <span class="bar-lines"></span>
+          <span class="bar-lines"></span>
+          <span class="bar-lines"></span>
+        </div>
+      </nav>
+    </header>
+    <script src="./navigation.js"></script>
+  </body>
+</html>

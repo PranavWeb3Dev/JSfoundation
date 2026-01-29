@@ -46,3 +46,53 @@ document.getElementById("removeLastTask").addEventListener('click', function () 
     let getListItems = document.getElementById("taskList");
         getListItems.lastElementChild.remove();
 })
+
+// Example 6
+document.getElementById('clickMeButton').addEventListener('click', function () {
+    let getInfo = document.getElementsByTagName("h2");
+    for (let i = 0; i <= getInfo.length; i++){
+        if (getInfo[i].textContent === "Event Handling in the DOM") {
+            getInfo[i].textContent = "Changed the DOM"
+        }
+    }
+})
+
+// Example 7
+document.getElementById("teaList").addEventListener('click', function (e) {
+    console.log(e.target.textContent);
+
+})
+
+// Example 8
+document.getElementById("feedbackForm").addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    let getReview = document.getElementById("feedbackInput");
+    let getLable = document.querySelector(`label[for="${getReview.id}"]`)
+    let postReview = document.getElementById("feedbackDisplay");
+    postReview.textContent = getLable.textContent + getReview.value;
+})
+
+//Example 9
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById("domStatus").textContent = "DOM Loaded Completely";
+})
+
+//Example 10
+let getToggel = document.getElementById("toggleHighlight");
+getToggel.addEventListener('click', function (e) {
+    e.preventDefault();
+    let getPara = document.getElementById("descriptionText");
+    getPara.classList.toggle("highlight");
+    console.log("Hello From Toggel Button");
+})
+
+// Dark Theme and Light Theme
+
+document.getElementById("toggelTheme").addEventListener('click', function(e){
+
+    console.log("Hello")
+    let getBody = document.getElementById('changeTheme');
+    getBody.classList.toggle("lightTheme");
+})
